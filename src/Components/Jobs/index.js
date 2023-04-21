@@ -151,7 +151,10 @@ class Jobs extends Component {
       <h1 className="typeOfEmployment_heading">Type of Employment</h1>
       <ul className="ul_typeOfEmploymentsList">
         {employmentTypesList.map(item => (
-          <li className="li_checkBox_label_container">
+          <li
+            className="li_checkBox_label_container"
+            key={item.employmentTypeId}
+          >
             <input
               onClick={this.onClickToggleCheckBox}
               className="check_box"
@@ -182,7 +185,7 @@ class Jobs extends Component {
       <h1 className="typeOfEmployment_heading">Salary Range</h1>
       <ul className="ul_typeOfEmploymentsList">
         {salaryRangesList.map(item => (
-          <li className="li_checkBox_label_container">
+          <li className="li_checkBox_label_container" key={item.salaryRangeId}>
             <input
               onClick={this.onClickRadioButton}
               name="salaryRange"

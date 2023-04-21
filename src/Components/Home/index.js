@@ -1,5 +1,5 @@
 import Cookies from 'js-cookie'
-import {Redirect} from 'react-router-dom'
+import {Redirect, Link} from 'react-router-dom'
 import Header from '../Header'
 
 import './index.css'
@@ -16,13 +16,15 @@ const Home = props => {
         Millions of people are searching for jobs, salary information, company
         reviews. Find the job that fits your abilities and potential.
       </p>
-      <button
-        onClick={onClickFindJobsBtn}
-        className="findJobs_btn"
-        type="button"
-      >
-        Find Jobs
-      </button>
+      <Link to="/jobs">
+        <button
+          onClick={onClickFindJobsBtn}
+          className="findJobs_btn"
+          type="button"
+        >
+          Find Jobs
+        </button>
+      </Link>
     </div>
   )
   const renderDeskTopView = () => (
